@@ -33,7 +33,7 @@ class Root{
         if(this.light < 70) this.light+=0.25
         if(this.size<this.maxSize){
             ctx.beginPath()
-            ctx.fillStyle= 'hsl(900,100%, '+this.light+'%)'
+            ctx.fillStyle= 'hsl(2000,100%, '+this.light+'%)'
 
             ctx.arc(this.x, this.y,this.size,0, Math.PI*2)
             
@@ -58,7 +58,7 @@ class Flower{
         this.maxfsize=this.size+ Math.random()*50
         this.image= new Image()
         this.image.src='canvara.png'
-        this.frameSize=50
+        this.frameSize=70
 
     }
     grow(){
@@ -72,7 +72,7 @@ class Flower{
 }
 
 window.addEventListener('mousemove',function(e){
-    for( let i=0; i<3; i++){
+    for( let i=0; i<1; i++){
         const root= new Root(e.x, e.y);
     root.update()
 
